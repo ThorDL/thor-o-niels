@@ -29,15 +29,12 @@ function startCountdown(durationInSeconds) {
 
   
 
-// Initialize the timer on page load
-window.addEventListener('load', () => {
-    const savedTime = sessionStorage.getItem('remainingTime');
-    if (savedTime) {
-        const remainingTime = parseInt(savedTime, 10);
-        if (remainingTime > 0) {
-            startCountdown(remainingTime);
-        } else {
-            sessionStorage.removeItem('remainingTime'); // Clear invalid time
-        }
+const savedTime = sessionStorage.getItem('remainingTime');
+if (savedTime) {
+    const remainingTime = parseInt(savedTime, 10);
+    if (remainingTime > 0) {
+        startCountdown(remainingTime);
+    } else {
+        sessionStorage.removeItem('remainingTime'); // Clear invalid time
     }
-});
+}
