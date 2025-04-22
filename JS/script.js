@@ -1,7 +1,6 @@
 const Timer = document.getElementById('Timer');
 const point = document.getElementById('Point');
 let timerInterval; // Declare globally to clear it if needed
-let currentPoint = 0; // Initialize points
 
 
 
