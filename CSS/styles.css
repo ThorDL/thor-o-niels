@@ -22,3 +22,71 @@
     height: 30px;
     width: 100px;
 }
+.Mette
+{
+   opacity: 0;
+   position: absolute;
+   left: 30%;
+   top: 0%;
+   height: 30px;
+   width: 100px;
+}
+.Søren
+{
+   opacity: 0;
+   position: absolute;
+   left: 30%;
+   top: 0%;
+   height: 90vh;
+   width: auto; /* Allow the width to adjust automatically */
+   display: flex; /* Use flexbox to center the image */
+   justify-content: center;
+   align-items: center;
+}
+
+.Søren img {
+   max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+   max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+   object-fit: contain; /* Scale the image while maintaining its aspect ratio */
+}
+
+.Piss
+{
+   opacity: 0;
+   position: absolute;
+   left: 30%;
+   top: 0%;
+   height: 90vh;
+   width: auto; /* Allow the width to adjust automatically */
+   display: flex; /* Use flexbox to center the image */
+   justify-content: center;
+   align-items: center;
+}
+
+.Piss img {
+   max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+   max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+   object-fit: contain; /* Scale the image while maintaining its aspect ratio */
+}
+
+.container
+{
+  width: fit-content;
+}
+.Dreng
+{
+   position: absolute;
+   left: 50%;
+   top: 0%;
+   height: 90vh;
+   width: auto; /* Allow the width to adjust automatically */
+   display: flex; /* Use flexbox to center the image */
+   justify-content: center;
+   align-items: center;
+}
+
+.Dreng img {
+   max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+   max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+   object-fit: contain; /* Scale the image while maintaining its aspect ratio */
+}

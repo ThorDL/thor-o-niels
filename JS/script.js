@@ -3,7 +3,7 @@ const point = document.getElementById('Point');
 let timerInterval; // Declare globally to clear it if needed
 
 
-
+point.innerHTML ="Point:" + sessionStorage.getItem('currentPoint') || 0; // Display current points
 
 function startCountdown(durationInSeconds) {
     console.log("Countdown started");
