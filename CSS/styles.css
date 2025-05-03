@@ -2,16 +2,17 @@
 {
    opacity: 0.8;
    position: absolute;
-    left: 30%;
+    left: 20%;
+    top: 5%;
     height: 30px;
     width: 100px;
 }
-.black-button2
+.dør
 {
   
    position: absolute;
-   left: 30%;
-
+   left: 6%;
+   top: 30%;
 }
 
 #clear-button
@@ -89,4 +90,39 @@
    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
    max-height: 100%; /* Ensure the image doesn't exceed the container's height */
    object-fit: contain; /* Scale the image while maintaining its aspect ratio */
+}
+
+.baggrund {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100vw; /* Set width to 100% of the viewport width */
+   height: 100vh; /* Set height to 100% of the viewport height */
+   display: flex; /* Use flexbox to center the image */
+   justify-content: center;
+   align-items: center;
+   z-index: -1; /* Ensure the background is behind other elements */
+   overflow: hidden; /* Prevent any overflow issues */
+}
+
+.skab
+{
+   position: absolute;
+   left: 60%;
+   top: 11%;
+   display: flex; /* Use flexbox to center the image */
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+
+.computer
+{
+   position: absolute;
+   left: 35%;
+   top: 61%;
+   display: flex; /* Use flexbox to center the image */
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
 }
