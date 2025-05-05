@@ -1,3 +1,5 @@
+console.log("script.js loaded");
+
 const Timer = document.getElementById('Timer');
 const point = document.getElementById('Point');
 let timerInterval; // Declare globally to clear it if needed
@@ -38,3 +40,10 @@ if (savedTime) {
         sessionStorage.removeItem('remainingTime'); // Clear invalid time
     }
 }
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 't' || event.key === 't') { // Tjekker om tasten "t" blev trykket
+        sessionStorage.clear(); // Rydder sessionStorage
+        console.log('t key pressed. sessionStorage cleared.');
+    }
+});
