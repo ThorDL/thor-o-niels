@@ -152,3 +152,13 @@
    align-items: center;
    z-index: 1;
 }
+
+.vandA
+{
+   position: absolute;
+   left: 10%;
+   top: 30%;
+   display: flex; /* Use flexbox to center the image */
+   justify-content: center;
+   align-items: center;
+}
