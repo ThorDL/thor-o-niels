@@ -152,6 +152,10 @@
    align-items: center;
    z-index: 1;
 }
+.computer:hover
+{
+   cursor: pointer;
+}
 .tove
 {
    position: absolute;

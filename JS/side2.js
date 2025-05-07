@@ -100,7 +100,7 @@ function kemi() {
     }
 }}
 
-computerCounterFunction = () => {
+function computerCounterFunction () {
     console.log('Computer clicked');
     computerCounter = parseInt(sessionStorage.getItem('computerCounter')) || 0; //henter computerCounter fra sessionStorage, hvis den ikke findes, sættes den til 0
     console.log('ComputerCounter fra sessionStorage: ' + computerCounter); //logger computerCounter fra sessionStorage
