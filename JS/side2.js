@@ -16,6 +16,8 @@ computer.addEventListener('click', () => {
 
 function fortnite() {
     console.log('Fortnite function called'); //logger besked
+    const tove = document.querySelector('.tove'); //finder element med tove class
+    tove.style.opacity = '0'; //sætter opacity til 0
     savedPoint += 5; // +5 point for fortnite
     console.log('savedPoint: ' + savedPoint); //logger savedPoint
     sessionStorage.setItem('currentPoint', savedPoint); //sætter savedPoint i sessionStorage
@@ -46,6 +48,8 @@ function fortnite() {
 
 function kemi() {
     console.log('Kemi function called'); //logger besked
+    const tove = document.querySelector('.tove'); //finder element med tove class
+    tove.style.opacity = '0'; //sætter opacity til 0
     const computer = document.querySelector('.computer'); //finder element med computer class
     if (computer) { //hvis elementet findes
         // console.log('Computer element found'); //logger besked
@@ -76,6 +80,7 @@ function kemi() {
             savedPoint -= 100; // -100 point for at svare forkert
             updatePoint(); //kalder updatePoint funktionen
             alert("Tove hader dig! Du får 02 i standpunktskarakter (-100 point)"); //viser alert besked
+            tove.style.opacity = '1'; //sætter opacity til 1
             console.log("forkert svar eller lukkede promt"); //logger besked hvis brugeren ikke skriver noget
         }
 }   else if (Math.random() < 0.2) { //hvis random tal er mindre end 0.2
@@ -90,6 +95,7 @@ function kemi() {
         savedPoint -= 1000; // -1000 point for at svare forkert
         updatePoint(); //kalder updatePoint funktionen
         alert("FORKERT! det bliver Tove ikke glad for (-1000 point)"); //viser alert besked
+        tove.style.opacity = '1'; //sætter opacity til 1
         console.log("forkert svar eller lukkede promt"); //logger besked hvis brugeren ikke skriver noget
     }
 }}
