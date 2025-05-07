@@ -11,8 +11,8 @@
 {
   
    position: absolute;
-   left: 6%;
-   top: 30%;
+   left: 0%;
+   top: 20%;
 }
 
 #clear-button
@@ -114,8 +114,8 @@
    position: absolute;
    left: 0;
    top: 0;
-   width: 100vw; /* Set width to 100% of the viewport width */
-   height: 100vh; /* Set height to 100% of the viewport height */
+   width: 98vw; /* Set width to 100% of the viewport width */
+   height: 98vh; /* Set height to 100% of the viewport height */
    display: flex; /* Use flexbox to center the image */
    justify-content: center;
    align-items: center;
@@ -138,7 +138,7 @@
 {
    position: absolute;
    left: 35%;
-   top: 61%;
+   top: 56%;
    display: flex; /* Use flexbox to center the image */
    justify-content: center;
    align-items: center;
