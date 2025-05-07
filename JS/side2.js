@@ -89,7 +89,7 @@ function kemi() {
     } else {
         savedPoint -= 1000; // -1000 point for at svare forkert
         updatePoint(); //kalder updatePoint funktionen
-        alert("FORKERT! hvis det her var social credits var du endt i fængsel (-1000 point)"); //viser alert besked
+        alert("FORKERT! det bliver Tove ikke glad for (-1000 point)"); //viser alert besked
         console.log("forkert svar eller lukkede promt"); //logger besked hvis brugeren ikke skriver noget
     }
 }}
