@@ -89,12 +89,12 @@ function kemi() {
     if (userInput === korrektSvar) {
         savedPoint += 5; // +5point for at svare rigtigt
         updatePoint(); //kalder updatePoint funktionen
-        alert("nemt spørgsmål, du har jo øvet dig på FORMEL spillet... +5 point"); //viser alert besked
+        alert("godt at du har øvet FORMLER spillet... +5 point"); //viser alert besked
         console.log("bruger svar: " + userInput); //logger brugerens input
     } else {
         savedPoint -= 1000; // -1000 point for at svare forkert
         updatePoint(); //kalder updatePoint funktionen
-        alert("FORKERT! det bliver Tove ikke glad for (-1000 point)"); //viser alert besked
+        alert("Det bliver Tove ik glad for, pas på hun ikke hælder uorganisk affald ud over dig! (-1000 point)"); //viser alert besked
         tove.style.opacity = '1'; //sætter opacity til 1
         console.log("forkert svar eller lukkede promt"); //logger besked hvis brugeren ikke skriver noget
     }
