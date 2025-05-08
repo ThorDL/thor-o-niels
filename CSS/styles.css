@@ -152,7 +152,6 @@
    align-items: center;
    z-index: 1;
 }
-
 .vandA
 {
    position: absolute;
@@ -161,4 +160,17 @@
    display: flex; /* Use flexbox to center the image */
    justify-content: center;
    align-items: center;
+}
+.computer:hover
+{
+   cursor: pointer;
+}
+.tove
+{
+   position: absolute;
+   left: 50%;
+   top: -10%;
+   z-index: 1;
+   width: 45%;
+   opacity: 0;
 }
