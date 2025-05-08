@@ -2,10 +2,10 @@ console.log("script.js loaded");
 
 const Timer = document.getElementById('Timer');
 const point = document.getElementById('Point');
-let timerInterval; // Declare globally to clear it if needed
+let timerInterval; 
 
 
-point.innerHTML ="Point:" + sessionStorage.getItem('currentPoint') || 0; // Display current points
+point.innerHTML ="Point:" + sessionStorage.getItem('currentPoint') || 0; // Display Points fra sessionStorage
 
 function startCountdown(durationInSeconds) {
     console.log("Countdown started");
@@ -17,11 +17,12 @@ function startCountdown(durationInSeconds) {
         const seconds = remainingTime % 60;
 
         Timer.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-        sessionStorage.setItem('remainingTime', remainingTime); // Save dynamically
+        sessionStorage.setItem('remainingTime', remainingTime); // gemmer den resterende tid i sessionStorage
 
         if (remainingTime <= 0) {
             clearInterval(timerInterval);
-            sessionStorage.removeItem('remainingTime'); // Clear saved time
+            sessionStorage.removeItem('remainingTime'); // fjerner den resterende tid fra sessionStorage
+            Timer.innerHTML = "Tid er gået!"; // Opdaterer timeren til at vise "Tid er gået!"
             console.log("Time's up!");
         }
 
