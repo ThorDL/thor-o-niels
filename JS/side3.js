@@ -7,7 +7,7 @@ console.log("Points updated to: " + savedPoint); // Log de opdaterede points
 
 let vandautomat = parseInt(sessionStorage.getItem('vandautomat'));
 vandautomat += 1; // Her forøges vandautomat med 1
-sessionStorage.setItem('vandautomat', vandautomat); // her gemmes vndautomat i sessionStorage
+sessionStorage.setItem('vandautomat', vandautomat); // her gemmes vandautomat i sessionStorage
 console.log("Vandautomat visits updated to: " + vandautomat); // Log den opdaterede værdi
 
 if (vandautomat == 2) {
@@ -17,14 +17,17 @@ if (vandautomat == 2) {
     let RanNummer = Math.random() * 3; // her vælges er tilfældigt tal mellem 0 og 3
     console.log("Random number generated: " + RanNummer); // Log det tilfældige tal for debugging
     if (RanNummer < 1) {
+        console.log("Initial savedPoint: " + savedPoint); // Log den oprindelige værdi
         alert("Du har besøgt automaten " + vandautomat + " gange. Mette står ved automaten og hun slår dig (-20 point)");
-        savedPoint -= 30; // Her gives -20 point da der er +10 point for at drikke vand og -30 for at blive slået
+        savedPoint -= 30; // Her gives -20 point da der er +10 point for at drikke vand og -30 for at blive slået af Mette
+        console.log("Updated savedPoint after subtraction: " + savedPoint); // Log den opdaterede værdi
+        sessionStorage.setItem('currentPoint', savedPoint); // her gemmes de opdaterede point
         const metteElements = document.querySelectorAll('.Mette'); // her vælges alle elementer med klassen 'Mette'
         metteElements.forEach(element => {
             element.style.opacity = '1'; // her ændres opacity til 1 (fuldt synlig)
             console.log("Changed opacity of Mette element to 1");
         });
-    } else if (RanNummer < 2) {
+    } else if (RanNummer >= 1 && RanNummer < 2) {
         alert("Du har besøgt automaten " + vandautomat + " gange. Søren Ryge står ved automaten og han giver dig 20 point");
         savedPoint += 10; // Her gives +20 point da der er +10 point for at drikke vand og +10 for at få 20 point af Søren
         sessionStorage.setItem('currentPoint', savedPoint); // her gemmes de opdaterede point
@@ -33,7 +36,7 @@ if (vandautomat == 2) {
             element.style.opacity = '1'; // her ændres opacity til 1 (fuldt synlig)
             console.log("Changed opacity of Søren element to 1");
         });
-    } else {
+    } else if (RanNummer >= 2) {
         alert("Du har besøgt automaten " + vandautomat + " gange. Du har drukket for meget vand og du pisser i bukserne (-50 point)");
         savedPoint -= 60; // Her gives -50 point da der er +10 point for at drikke vand og -60 for at tisse i bukserne
         sessionStorage.setItem('currentPoint', savedPoint); // her gemmes de opdaterede point

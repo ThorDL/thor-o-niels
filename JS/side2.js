@@ -6,7 +6,7 @@ let computerCounter = 0; //hvor mange gange der er klikket på computer
 let savedPoint = parseInt(sessionStorage.getItem('currentPoint'));
 
 console.log('computerCounter: ' + computerCounter); //logger computerCounter
-console.log("Points updated to: " + savedPoint); // Log the updated points
+console.log("Points updated to: " + savedPoint); // Logger de opdaterede points
 
 
 
@@ -42,7 +42,7 @@ function fortnite() {
     Math.random(); //genererer et random tal mellem 0 og 1
     if (Math.random() < 0.2) { //hvis random tal er mindre end 0.1
         alert("du spiller for meget i timen og din lærer kommer ind og slår dig (-50 point)"); //viser alert besked
-        savedPoint -= 30; // -25 point for at spille og -5 fordi man ikke skal have de +5 point
+        savedPoint -= 55; // -50 point for at spille og -5 fordi man ikke skal have de +5 point
         updatePoint(); //kalder updatePoint funktionen
 }}
 
